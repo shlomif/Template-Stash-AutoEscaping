@@ -8,3 +8,4 @@ Revision history for Perl extension Template::Stash::AutoEscape
         - now [% hash.item(key) %] works as [% hash.item(key.raw) %] by default.
 
         - Add the 'die_on_unescaped' and 'method_for_escape' options.
+        - Fix the name of the "Template::Exception" class.

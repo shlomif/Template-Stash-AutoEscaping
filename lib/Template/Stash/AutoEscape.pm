@@ -10,6 +10,7 @@ use base ($Template::Config::STASH, 'Class::Data::Inheritable');
 use Data::Dumper;
 use UNIVERSAL::require;
 use Template::Stash::AutoEscape::RawString;
+use Template::Exception;
 
 __PACKAGE__->mk_classdata('class_for_type');
 __PACKAGE__->class_for_type({
@@ -121,7 +122,7 @@ sub get {
     # string
     unless ($ref) {
         if ($self->{die_on_unescaped}) {
-            die Template::Excpetion->new(
+            die Template::Exception->new(
                 $args[0], "Unescaped and not marked as raw"
             );
         }
