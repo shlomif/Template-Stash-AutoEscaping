@@ -2,7 +2,7 @@ package Template::Stash::AutoEscape;
 
 use strict;
 use warnings;
-our $VERSION = '0.02';
+our $VERSION = '0.0203';
 
 use Template::Config;
 use base ($Template::Config::STASH, 'Class::Data::Inheritable');
