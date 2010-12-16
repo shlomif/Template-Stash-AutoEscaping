@@ -2,7 +2,7 @@ package Template::Stash::AutoEscape;
 
 use strict;
 use warnings;
-our $VERSION = '0.0203';
+our $VERSION = '0.0205';
 
 use Template::Config;
 use base ($Template::Config::STASH, 'Class::Data::Inheritable');
@@ -120,10 +120,10 @@ sub get {
 
     my $ref = ref $var;
     # string
-    unless ($ref) {
+    if ((!$ref) and (length($var) > 0)) {
         if ($self->{die_on_unescaped}) {
             die Template::Exception->new(
-                $args[0], "Unescaped and not marked as raw"
+                Dumper([ $args[0] ]), "Unescaped and not marked as raw"
             );
         }
         else {
