@@ -1,4 +1,4 @@
-package Template::Stash::AutoEscape;
+package Template::Stash::AutoEscaping;
 
 use strict;
 use warnings;
@@ -9,7 +9,7 @@ use base ($Template::Config::STASH, 'Class::Data::Inheritable');
 
 use Data::Dumper;
 use UNIVERSAL::require;
-use Template::Stash::AutoEscape::RawString;
+use Template::Stash::AutoEscaping::RawString;
 use Template::Exception;
 
 __PACKAGE__->mk_classdata('class_for_type');
@@ -173,14 +173,14 @@ __END__
 
 =head1 NAME
 
-Template::Stash::AutoEscape - escape automatically in Template-Toolkit.
+Template::Stash::AutoEscaping - escape automatically in Template-Toolkit.
 
 =head1 SYNOPSIS
 
   use Template;
-  use Template::Stash::AutoEscape;
+  use Template::Stash::AutoEscaping;
   my $tt = Template->new({
-    STASH => Template::Stash::AutoEscape->new  
+    STASH => Template::Stash::AutoEscaping->new  
   });
 
 =head1 METHODS
@@ -211,14 +211,14 @@ default is raw, you can get not escaped value from [% value.raw %]
 =item escape_method
 
   my $tt = Template->new({
-    STASH => Template::Stash::AutoEscape->new({
+    STASH => Template::Stash::AutoEscaping->new({
         escape_method => sub { my $text = shift; ... ; return $text }
     })
   });
 
 =item ignore_escape  
 
-  my $stash = Template::Stash::AutoEscape->new({ignore_escape => [qw(include_html include_raw my_escape_func)], ... );
+  my $stash = Template::Stash::AutoEscaping->new({ignore_escape => [qw(include_html include_raw my_escape_func)], ... );
 
   You can disable auto-escape for some value or TT-Macro.
   For example: include other component, for output safety html, using other escape method, etc.
@@ -227,29 +227,34 @@ default is raw, you can get not escaped value from [% value.raw %]
 
 =head2 class_for
 
-    Template::Stash::AutoEscape->class_for("HTML") # Template::Stash::AutoEscape::Escaped::HTML
-    Template::Stash::AutoEscape->class_for("HTML" => "MyHTMLString");
+    Template::Stash::AutoEscaping->class_for("HTML") # Template::Stash::AutoEscaping::Escaped::HTML
+    Template::Stash::AutoEscaping->class_for("HTML" => "MyHTMLString");
 
 =head1 DESCRIPTION
 
-Template::Stash::AutoEscape is a sub class of L<Template::Stash>, automatically escape all HTML strings and avoid XSS vulnerability.
+Template::Stash::AutoEscaping is a sub class of L<Template::Stash>, automatically escape all HTML strings and avoid XSS vulnerability.
 
 =head1 CONFIGURE
 
 =over 2
 
-=item $Template::Stash::AutoEscape::ESCAPE_ARGS
+=item $Template::Stash::AutoEscaping::ESCAPE_ARGS
 
  default is 0. for example "key of hash" or "args of vmethods" are not escaped. I think this is good in most cases.
  [% hash.${key} %] [% hash.item(key) %] means [% hash.${key.raw} | html %] [% hash.item(key.raw) | html %] by default.
 
 =head1 AUTHOR
 
-mala E<lt>cpan@ma.laE<gt>
+mala E<lt>cpan@ma.laE<gt> (original author of L<Template::Stash::AutoEscape>)
+
+Shlomi Fish (L<http://www.shlomifish.org/>) added some enhancements and
+fixes, while disclaiming all rights, as part of his work for
+L<http://reask.com/> and released the result as 
+C<Template::Stash::AutoEscaping> .
 
 =head1 SEE ALSO
 
-L<Template>, L<Template::Stash::EscapedHTML>
+L<Template>, L<Template::Stash::EscapedHTML>, L<Template::Stash::AutoEscape>
 
 =head1 LICENSE
 

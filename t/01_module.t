@@ -3,10 +3,10 @@ use Test::Base;
 plan 'no_plan';
 
 use URI;
-use Template::Stash::AutoEscape;
-use Template::Stash::AutoEscape::Escaped::HTML;
+use Template::Stash::AutoEscaping;
+use Template::Stash::AutoEscaping::Escaped::HTML;
 
-my $html_class = Template::Stash::AutoEscape->class_for('HTML');
+my $html_class = Template::Stash::AutoEscaping->class_for('HTML');
 
 sub my_html_filter {
     my $text = shift;
@@ -24,10 +24,10 @@ sub my_html_filter {
 }
 
 sub as_html {
-    Template::Stash::AutoEscape->class_for('HTML')->new_as_escaped( $_[0] );
+    Template::Stash::AutoEscaping->class_for('HTML')->new_as_escaped( $_[0] );
 }
 
-my $stash = Template::Stash::AutoEscape->new(
+my $stash = Template::Stash::AutoEscaping->new(
     escape_type    => "HTML",    # default => HTML
     method_for_raw => "raw",     # default => raw
 );

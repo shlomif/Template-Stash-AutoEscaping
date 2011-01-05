@@ -1,7 +1,7 @@
-package Template::Stash::AutoEscape::Escaped::HTML;
+package Template::Stash::AutoEscaping::Escaped::HTML;
 use strict;
 use warnings;
-use base qw(Template::Stash::AutoEscape::Escaped::Base);
+use base qw(Template::Stash::AutoEscaping::Escaped::Base);
 
 sub escape {
     my $class = shift;

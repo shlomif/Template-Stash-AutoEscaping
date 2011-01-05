@@ -1,4 +1,4 @@
-package Template::Stash::AutoEscape::RawString;
+package Template::Stash::AutoEscaping::RawString;
 use strict;
 use warnings;
 use overload '""' => \&as_string;

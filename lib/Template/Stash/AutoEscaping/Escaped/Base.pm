@@ -1,4 +1,4 @@
-package Template::Stash::AutoEscape::Escaped::Base;
+package Template::Stash::AutoEscaping::Escaped::Base;
 use strict;
 use warnings;
 

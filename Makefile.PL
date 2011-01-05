@@ -1,6 +1,6 @@
 use inc::Module::Install;
-name 'Template-Stash-AutoEscape';
-all_from 'lib/Template/Stash/AutoEscape.pm';
+name 'Template-Stash-AutoEscaping';
+all_from 'lib/Template/Stash/AutoEscaping.pm';
 
 # requires '';
 
