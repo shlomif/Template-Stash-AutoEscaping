@@ -1,3 +1,10 @@
+Revision history for Perl extension Template::Stash::AutoEscaping
+
+0.03    Wed Jan  5 11:53:34 IST 2011
+
+        - forked from Template-Stash-AutoEscape after some bug fixes and
+        enhancements.
+
 Revision history for Perl extension Template::Stash::AutoEscape
 
 0.01    Mon Jun  8 22:25:27 2009
