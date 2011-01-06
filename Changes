@@ -1,5 +1,9 @@
 Revision history for Perl extension Template::Stash::AutoEscaping
 
+0.0301  Thu Jan  6 12:02:13 IST 2011
+        - Add missing dependencies to the Makefile.PL, especially a
+        build_requires on 'URI'.
+
 0.03    Wed Jan  5 11:53:34 IST 2011
 
         - forked from Template-Stash-AutoEscape after some bug fixes and
