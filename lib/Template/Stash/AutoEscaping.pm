@@ -232,6 +232,22 @@ default is raw, you can get not escaped value from [% value.raw %]
     Template::Stash::AutoEscaping->class_for("HTML") # Template::Stash::AutoEscaping::Escaped::HTML
     Template::Stash::AutoEscaping->class_for("HTML" => "MyHTMLString");
 
+=head2 escape
+
+B<For internal use>.
+
+=head2 escape_count
+
+B<For internal use>.
+
+=head2 get
+
+B<For internal use>.
+
+=head2 get_raw_args
+
+B<For internal use>.
+
 =head1 DESCRIPTION
 
 Template::Stash::AutoEscaping is a sub class of L<Template::Stash>, automatically escape all HTML strings and avoid XSS vulnerability.
