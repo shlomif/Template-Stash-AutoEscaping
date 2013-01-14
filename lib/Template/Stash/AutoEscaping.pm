@@ -171,6 +171,8 @@ sub escape_count {
 
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
 Template::Stash::AutoEscaping - escape automatically in Template-Toolkit.
@@ -187,7 +189,7 @@ Template::Stash::AutoEscaping - escape automatically in Template-Toolkit.
 
 =head2 new
 
-=over 2
+=over 4
 
 =item die_on_unescaped
 
@@ -236,12 +238,14 @@ Template::Stash::AutoEscaping is a sub class of L<Template::Stash>, automaticall
 
 =head1 CONFIGURE
 
-=over 2
+=over 4
 
 =item $Template::Stash::AutoEscaping::ESCAPE_ARGS
 
  default is 0. for example "key of hash" or "args of vmethods" are not escaped. I think this is good in most cases.
  [% hash.${key} %] [% hash.item(key) %] means [% hash.${key.raw} | html %] [% hash.item(key.raw) | html %] by default.
+
+=back
 
 =head1 AUTHOR
 
