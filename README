@@ -2,7 +2,7 @@ Template::Stash::AutoEscaping.
 
 INSTALLATION
 
-The Template::Stash::AutoEscaping installation is straightforward. If your 
+The Template::Stash::AutoEscaping installation is straightforward. If your
 CPAN shell is set up, you should just be able to do
 
     % cpan Template::Stash::AutoEscape

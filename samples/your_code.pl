@@ -11,7 +11,7 @@ my $stash = Template::Stash::AutoEscape->new({
     escape_method => sub {
         my $text = shift;
         $text =~s/'/&quot;/g;
-        $text  
+        $text
     },
 });
 

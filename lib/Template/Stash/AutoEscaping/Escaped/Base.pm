@@ -40,7 +40,7 @@ sub flag {
     $self->[FLAG];
 }
 
-sub escape {  
+sub escape {
     # ABSTRACT METHOD
 }
 
@@ -59,8 +59,8 @@ sub escape_manually {
 
 sub as_string {
     my $self = shift;
-   
-    # already escaped 
+
+    # already escaped
     if ($self->[FLAG] && defined $self->[ESCAPED]) {
         $self->[CALLBACK]->($self) if (defined $self->[CALLBACK]);
         return $self->[ESCAPED];
