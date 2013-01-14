@@ -1,7 +1,9 @@
 Revision history for Perl extension Template::Stash::AutoEscaping
 
+0.0302  Mon 14 Jan 19:48:34 IST 2013
         - Fix the POD validation problems ( t/pod.t ).
         - Add t/pod-coverage.t and fix POD coverage.
+        - Add t/style-trailing-space.t to get rid of trailing whitespace.
 
 0.0301  Thu Jan  6 12:02:13 IST 2011
         - Add missing dependencies to the Makefile.PL, especially a
