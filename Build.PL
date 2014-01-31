@@ -12,15 +12,17 @@ my $mb = Test::Run::Builder->new(
     dist_version_from => 'lib/Template/Stash/AutoEscaping.pm',
     requires =>
     {
-        'base' => 0,
         'Class::Data::Inheritable' => 0,
         'Data::Dumper' => 0,
-        'overload' => 0,
-        'strict' => 0,
         'Template' => 0,
         'Template::Config' => 0,
         'Template::Exception' => 0,
         'UNIVERSAL::require' => 0,
+        'base' => 0,
+        'overload' => 0,
+        'parent' => 0,
+        'perl' => '5.012',
+        'strict' => 0,
         'warnings' => 0,
     },
     build_requires =>

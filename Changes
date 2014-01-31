@@ -1,5 +1,7 @@
 Revision history for Perl extension Template::Stash::AutoEscaping
 
+        - Minimal version of perl (CPANTS).
+
 0.0302  Mon 14 Jan 19:48:34 IST 2013
         - Fix the POD validation problems ( t/pod.t ).
         - Add t/pod-coverage.t and fix POD coverage.

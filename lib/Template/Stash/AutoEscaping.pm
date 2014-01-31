@@ -2,10 +2,13 @@ package Template::Stash::AutoEscaping;
 
 use strict;
 use warnings;
+
+use 5.012;
+
 our $VERSION = '0.0302';
 
 use Template::Config;
-use base ($Template::Config::STASH, 'Class::Data::Inheritable');
+use parent ($Template::Config::STASH, 'Class::Data::Inheritable');
 
 use Data::Dumper;
 use UNIVERSAL::require;
