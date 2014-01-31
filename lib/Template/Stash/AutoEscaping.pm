@@ -5,7 +5,7 @@ use warnings;
 
 use 5.012;
 
-our $VERSION = '0.0302';
+our $VERSION = '0.0303';
 
 use Template::Config;
 use parent ($Template::Config::STASH, 'Class::Data::Inheritable');
